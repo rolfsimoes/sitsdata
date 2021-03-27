@@ -22,7 +22,7 @@
 #'
 #' @usage data(cerrado_61K_14classes_4bands)
 #'
-"cerrado_61K_14classes_4bands"
+"samples_cerrado_mod13q1"
 
 #' @title Time series of agriculture and forestry in Mato Grosso from MOD13Q1
 #' @docType data
@@ -38,7 +38,7 @@
 #'
 #' @usage data(br_mt_1_8K_9classes_6bands)
 #'
-"br_mt_1_8K_9classes_6bands"
+"samples_matogrosso_mod13q1" 
 
 #' @title Samples for Brazilian Cerrado using CBERS AWFI image
 #' @docType data
@@ -59,24 +59,4 @@
 #'
 #' @usage data(cbers_samples_022024)
 #'
-"cbers_samples_022024"
-
-#' @title Samples for an area in Amazonia using SENTINEL-2/2A MSI data
-#' @docType data
-#' @keywords datasets
-#' @description A dataset containing a tibble with time series sampled on the
-#' Brazilian Amazonia (Rondonia state). The time series come from a set of SENTINEL-2/2A MSI images
-#' over tile "T20LKP" of the standard S2 grid.
-#'
-#' @format A tibble with 1 rows and 7 variables: longitude, latitude, start_date
-#'   (initial date of the time series), end_date (final date of the time series),
-#'   label (the class label associated to the sample),
-#'   cube (the name of the data cube associated with the time series),
-#'   time_series (list containing a tibble with the values of the time series).
-#'   Each time series comprehends one year of composites of S2 and S2A images,
-#'   comprising 36 data points and 11 bands and indices
-#'   (B02, B03, B07, B08, B8A, B11, B12, evi, ndvi, ndmi, savi)
-#'
-#' @usage data(samples_S2_T20LKP_2018_2019)
-#'
-"samples_S2_T20LKP_2018_2019"
+"samples_cerrado_cbers" 
