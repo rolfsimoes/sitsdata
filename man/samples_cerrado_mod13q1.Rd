@@ -3,7 +3,7 @@
 \docType{data}
 \name{samples_cerrado_mod13q1}
 \alias{samples_cerrado_mod13q1}
-\title{Yearly samples of 14 classes on Cerrado biome from MOD13Q1 images}
+\title{Yearly samples of 13 classes on Cerrado biome from MOD13Q1 images}
 \format{
 A \code{sits} tibble with 61K samples. A \code{sits} tibble contains the following meta-data:
   longitude (East-west coordinate of the time series sample in WGS 84),
@@ -14,16 +14,19 @@ A \code{sits} tibble with 61K samples. A \code{sits} tibble contains the followi
   coverage (the name of the coverage associated with the data), and
   time_series ( list containing a tibble with the values of the time series).
 
-  The samples are from many sources. It has 13 classes ("Araguaia", "Campo_Cerrado",
-  "Cerradao", "Cerrado", "Cerrado_Rupestre", "Dunas",
-  "Fallow_Cotton", "Millet_Cotton", "Pasture", "Silvicultura",
-  "Soy_Corn", "Soy_Cotton", "Soy_Fallow", "Soy_Millet").
+  The training samples were collected by ground surveys 
+  and high-resolution image interpretation by experts from 
+  the Brazilian National Institute for Space Research (INPE) 
+  team and partners. It has 13 classes ("Dense_Tree_Savanna", "Dunes",
+  "Fallow_Cotton", "Millet_Cotton", "Open_Savanna", "Pasture", "Planted Forest"     
+  "Savanna", "Shrublands", "Soy_Corn", "Soy_Cotton", "Soy_Fallow", 
+  "and "Wetlands").
 
-  Each time series comprehends 12 months (23 data points) from MOD13Q1 product, and has 4 bands
-  ("evi", "ndvi", "mir", and "nir").
+  Each time series covers 12 months (23 data points) from the MOD13Q1 product, 
+  and has 4 bands ("evi", "ndvi", "mir", and "nir").
 }
 \usage{
-data(cerrado_61K_14classes_4bands)
+data(samples_cerrado_mod13q1)
 }
 \description{
 A dataset containing a sits tibble with time series samples from Brazilian Cerrado biome.

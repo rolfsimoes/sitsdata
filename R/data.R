@@ -1,6 +1,7 @@
-#' Yearly samples of 14 classes on Cerrado biome from MOD13Q1 images
+#' @title Yearly samples of 13 classes on Cerrado biome from MOD13Q1 images
 #' @docType data
-#'
+#' @name samples_cerrado_mod13q1
+#' @keywords datasets
 #' @description A dataset containing a sits tibble with time series samples from Brazilian Cerrado biome.
 #'
 #' @format A \code{sits} tibble with 61K samples. A \code{sits} tibble contains the following meta-data:
@@ -15,20 +16,22 @@
 #'   The training samples were collected by ground surveys 
 #'   and high-resolution image interpretation by experts from 
 #'   the Brazilian National Institute for Space Research (INPE) 
-#'   team and partners. It has 14 classes ("Dense_Tree_Savanna", "Dunes",
+#'   team and partners. It has 13 classes ("Dense_Tree_Savanna", "Dunes",
 #'   "Fallow_Cotton", "Millet_Cotton", "Open_Savanna", "Pasture", "Planted Forest"     
 #'   "Savanna", "Shrublands", "Soy_Corn", "Soy_Cotton", "Soy_Fallow", 
-#'   "Soy_Millet", and "Wetlands").
+#'   "and "Wetlands").
 #'
 #'   Each time series covers 12 months (23 data points) from the MOD13Q1 product, 
 #'   and has 4 bands ("evi", "ndvi", "mir", and "nir").
 #'
 #' @usage data(samples_cerrado_mod13q1)
 #'
-"samples_cerrado_mod13q1"
+NULL
 
 #' @title Time series of agriculture and forestry in Mato Grosso from MOD13Q1
 #' @docType data
+#' @name samples_matogrosso_mod13q1
+#' @keywords datasets
 #'
 #' @description A dataset containing a sits tibble with time series samples from Brazilian
 #' Mato Grosso State (Amazon and Cerrado biomes).
@@ -41,9 +44,10 @@
 #'
 #' @usage data(br_mt_1_8K_9classes_6bands)
 #'
-"samples_matogrosso_mod13q1" 
+NULL
 
 #' @title Samples for Brazilian Cerrado using CBERS AWFI image
+#' @name samples_cerrado_cbers
 #' @docType data
 #' @keywords datasets
 #' @description A dataset containing a tibble with time series sampled on the
@@ -62,4 +66,4 @@
 #'
 #' @usage data(cbers_samples_022024)
 #'
-"samples_cerrado_cbers" 
+NULL
