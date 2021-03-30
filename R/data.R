@@ -42,7 +42,7 @@ NULL
 #'    Each time series comprehends 12 months (23 data points)
 #'    from MOD13Q1 product, with 6 bands.
 #'
-#' @usage data("br_mt_1_8K_9classes_6bands")
+#' @usage data("samples_matogrosso_mod13q1")
 #'
 NULL
 
@@ -64,7 +64,7 @@ NULL
 #'   from AWFI images, comprising 23 data points and 6 bands
 #'   (blue, green, red, nir, ndvi, evi)
 #'
-#' @usage data("cbers_samples_022024")
+#' @usage data("samples_cerrado_cbers")
 #'
 NULL
 #' @title Samples of deforestation-related classes for the LANDSAT image WRS 226/064 (Para State)
@@ -77,7 +77,9 @@ NULL
 #'
 #' @docType data
 #' @keywords datasets
-#' @name samples_para_mix8mod
-#' @usage data("samples_para_mix8mod")
-#' @format A tibble with 617 rows and 7 variables
+#' @name samples_para_mixl8mod
+#' 
+#' @format A tibble with 617 rows and 7 variables from a region of Para state
+#' 
+#' @usage data("samples_para_mixl8mod") 
 NULL

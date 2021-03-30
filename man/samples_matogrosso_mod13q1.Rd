@@ -12,7 +12,7 @@ A \code{sits} tibble with 1.8K samples and 9 classes ("Cerrado",
    from MOD13Q1 product, with 6 bands.
 }
 \usage{
-data("br_mt_1_8K_9classes_6bands")
+data("samples_matogrosso_mod13q1")
 }
 \description{
 A dataset containing a sits tibble with time series samples from Brazilian
