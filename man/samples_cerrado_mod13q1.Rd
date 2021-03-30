@@ -26,7 +26,7 @@ A \code{sits} tibble with 61K samples. A \code{sits} tibble contains the followi
   and has 4 bands ("evi", "ndvi", "mir", and "nir").
 }
 \usage{
-data(samples_cerrado_mod13q1)
+data("samples_cerrado_mod13q1")
 }
 \description{
 A dataset containing a sits tibble with time series samples from Brazilian Cerrado biome.
