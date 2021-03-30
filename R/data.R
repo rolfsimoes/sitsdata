@@ -77,9 +77,9 @@ NULL
 #'
 #' @docType data
 #' @keywords datasets
-#' @name samples_para_mix8mod
+#' @name samples_para_mixl8mod
 #' 
 #' @format A tibble with 617 rows and 7 variables from a region of Para state
 #' 
-#' @usage data("samples_para_mix8mod") 
+#' @usage data("samples_para_mixl8mod") 
 NULL
