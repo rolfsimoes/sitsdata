@@ -15,7 +15,7 @@ A tibble with 1 rows and 7 variables: longitude, latitude, start_date
   (blue, green, red, nir, ndvi, evi)
 }
 \usage{
-data(cbers_samples_022024)
+data("cbers_samples_022024")
 }
 \description{
 A dataset containing a tibble with time series sampled on the
