@@ -7,9 +7,9 @@ citEntry(entry = "Misc",
          address      = "Sao Jose dos Campos, Brazil",
          year         = "2021",
          url          = "https://github.com/e-sensing/sits-data",
-         header       = "To cite sits-data in publications use:",
+         header       = "To cite sitsdata in publications use:",
          textVersion  =
              paste("Camara, Gilberto; Simoes, Rolf (2018).",
-                   "Land cover time series samples for the sits pacakge",
+                   "Land cover time series samples for the sits package",
                    "URL https://github.com/e-sensing/sits-data.")
 )
