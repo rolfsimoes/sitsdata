@@ -14,14 +14,12 @@ from BDC Landsat 8 16-days composite (stack) data cube, with 9 bands,
 with cloud values removed and interpolated using sits. 
    
 This dataset is composed from a variety of sources:
-\itemize {
-\item Field work of TerraClass-Cerrado Team (EMBRAPA and INPE);
-\item Field work of Pastagem.org Team (LAPIG-UFG);
-\item Image interpretation of BDC Team (INPE)
-\item Automatic extraction and cross comparison analysis among 
+Field work of TerraClass-Cerrado Team (EMBRAPA and INPE);
+Field work of Pastagem.org Team (LAPIG-UFG);
+Image interpretation of BDC Team (INPE)
+Automatic extraction and cross comparison analysis among 
 Pastagem.org (LAPIG-UFG), PRODES-Cerrado (INPE), 
 and MapBiomas (MapBiomas) maps;
-}
 }
 \usage{
 data("samples_cerrado_lc8")

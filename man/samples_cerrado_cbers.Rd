@@ -6,13 +6,13 @@
 \title{Samples for Brazilian Cerrado using CBERS AWFI image}
 \format{
 A tibble with 1 rows and 7 variables: longitude, latitude, start_date
-  (initial date of the time series), end_date (final date of the time series),
-  label (the class label associated to the sample),
-  cube (the name of the data cube associated with the time series),
-  time_series (list containing a tibble with the values of the time series).
-  Each time series comprehends one year of 16-day composites
-  from AWFI images, comprising 23 data points and 6 bands
-  (blue, green, red, nir, ndvi, evi)
+(initial date of the time series), end_date (final date of the time series),
+label (the class label associated to the sample),
+cube (the name of the data cube associated with the time series),
+time_series (list containing a tibble with the values of the time series).
+Each time series comprehends one year of 16-day composites
+from AWFI images, comprising 23 data points and 6 bands
+(blue, green, red, nir, ndvi, evi)
 }
 \usage{
 data("samples_cerrado_cbers")
