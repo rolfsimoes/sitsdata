@@ -1,0 +1,2 @@
+cerrado_classification     Reproduce paper "Satellite Image Time Series Analysis for Big Earth ObservationData"
+ml_comparison              Do cross-validations on a different machine learning models and compare them
