@@ -41,7 +41,7 @@ data folder of this package that can be accessed using:
 \code{system.file("extdata/cerrado/validation.csv", package = "sitsdata")}
 
 This validation samples as well as the training data set were collected 
-as part of the Brazil Data Cube project (\link{http://brazildatacube.org}).
+as part of the Brazil Data Cube project (http://brazildatacube.org).
 More details on how these data sets were obtained can be found in the 
 referred paper.
 }
