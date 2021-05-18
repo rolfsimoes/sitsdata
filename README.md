@@ -24,7 +24,7 @@ All data sets in the "data" directory are tibbles with satellite image time seri
 
 A dataset containing a sits tibble with 64 K time series samples from Brazilian Cerrado biome, with 14 classes ("Araguaia", "Campo_Cerrado", "Cerradao", "Cerrado", "Cerrado_Rupestre", "Dunas", "Silvicultura" "Fallow_Cotton", "Millet_Cotton", "Pasture", "Soy_Corn", "Soy_Cotton", "Soy_Fallow", "Soy_Millet"). Each time series covers 12 months (23 data points) from MOD13Q1 product, and has 4 bands ("evi", "ndvi", "mir", and "nir").
 
-Usage: `data("cerrado_61K_14classes_4bands")`
+Usage: `data("samples_cerrado_mod13q1")`
 
 #### Mato Grosso State (Brazil) Land Use and Land Cover Samples: 9 classes, 6 bands, 1,800 time series
 
@@ -32,7 +32,7 @@ A dataset containing a sits tibble with time series samples from Brazilian Mato 
 
 Source: Câmara, Gilberto; Picoli, Michelle; Maciel, Adeline; Simoes, Rolf; Santos, Lorena; Andrade, Pedro R; Ferreira, Karine; Begotti, Rodrigo; Sanches, Ieda; Carvalho, Alexandre X Y; Coutinho, Alexandre; Esquerdo, Julio; Antunes, Joao; Arvor, Damien (2019): Land cover change maps for Mato Grosso State in Brazil: 2001-2017 (version 3). PANGAEA, https://doi.org/10.1594/PANGAEA.899706
 
-Usage: `data("br_mt_1_8K_9classes_6bands")`
+Usage: `data("samples_matogrosso_mod13q1")`
 
 #### Samples for an area of the Brazilian Cerrado using CBERS-4 AWFI image
 
@@ -46,7 +46,7 @@ A dataset containing a tibble with time series sampled on the
 Brazilian Amazonia (Rondonia state). The time series come from a set of SENTINEL-2/2A MSI images
 over tile "T20LKP" of the standard S2 grid. Each time series comprehends one year of composites of S2 and S2A images, comprising 36 data points and 11 bands and indices (B02, B03, B07, B08, B8A, B11, B12, evi, ndvi, ndmi, savi). This data set should be used in conjunction with the Sentinel-2 images available in the "extdata" directory (see below)
 
-Usage:`data(samples_S2_T20LKP_2018_2019)`
+Usage:`data(samples_rondonia_sentinel2)`
 
 ## Description of the "extdata" directory
 ## 
