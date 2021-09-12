@@ -121,5 +121,31 @@ NULL
 #' 
 #'    
 #' @usage data("samples_cerrado_lc8")
+NULL
+
+#'@title Samples of Amazon tropical forest biome for deforestation analysis
+#'
+#' 
+#' @docType data
+#' @name samples_rondonia_s2.rda
+#' @keywords datasets
+#'
+#' @description 
+#' A sits tibble with time series samples from Brazilian Amazonia rain forest.
+#' 
+#' The labels are: "Deforestation", "Forest", "NatNonForest" and "Pasture".
+#' 
+#' The time series were extracted from the Sentinel-2 BDC data cube 
+#' (collection = "S2_10_16D_STK-1", tiles = "077095"). 
+#' These time series comprehends a period of 12 months 
+#' (25 observations) from "2018-07-12" to "2019-07-28".
+#' The extracted bands are NDVI and EVI.
+#' Cloudy values were removed and interpolated.
+#'
+#' @format 
+#' A \code{sits} tibble with 1202 samples.
+#' 
+#'    
+#' @usage data("samples_rondonia_s2")
 #'
 NULL
