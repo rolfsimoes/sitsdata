@@ -1,0 +1,4 @@
+id,longitude,latitude,start_date,end_date,label
+1,-47.84006021,-14.84648227,2017-08-13,2018-07-12,lavoura_temporaria
+2,-47.90341933,-14.25132068,2017-08-13,2018-07-12,vegetacao_florestal
+3,-47.4535048836,-14.620081249,2017-08-13,2018-07-12,vegetacao_herbacea_arbustiva
