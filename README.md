@@ -22,7 +22,7 @@ All data sets in the "data" directory are tibbles with satellite image time seri
 
 #### Cerrado Land Use and Land Cover Samples: 12 classes, 4 bands, 50,160 time series
 
-A dataset containing a sits tibble with 50 K time series samples from Brazilian Cerrado biome, with 12 classes ("Dense_Woodland", "Dunes", "Fallow_Cotton", "Millet_Cotton", "Pasture", "Rocky_Savanna", "Savanna", "Savanna_Parkland", "Silviculture",  "Soy_Corn", "Soy_Cotton", "Soy_Fallow"). Each time series covers 12 months (23 data points) from MOD13Q1 product, and has 4 bands ("evi", "ndvi", "mir", and "nir").  This data set is used in the paper:
+A dataset containing a sits tibble with 50 K time series samples from Brazilian Cerrado biome, with 12 classes ("Dense_Woodsitland", "Dunes", "Fallow_Cotton", "Millet_Cotton", "Pasture", "Rocky_Savanna", "Savanna", "Savanna_Parkland", "Silviculture",  "Soy_Corn", "Soy_Cotton", "Soy_Fallow"). Each time series covers 12 months (23 data points) from MOD13Q1 product, and has 4 bands ("evi", "ndvi", "mir", and "nir").  This data set is used in the paper:
 
 Lorena A. Santos, Karine R. Ferreira, Gilberto Camara, Michelle C.A. Picoli, Rolf E. Simoes, “Quality control and class noise reduction of satellite image time series”. ISPRS Journal of Photogrammetry and Remote Sensing, vol. 177, pp 75-88, 2021. https://doi.org/10.1016/j.isprsjprs.2021.04.014.
 
