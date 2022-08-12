@@ -31,10 +31,9 @@ Reference: Lorena Santos, Karine Ferreira, Gilberto Camara, Michelle Picoli, Rol
 
 Example: See chapter ["Improving the Quality of Training Samples"](https://e-sensing.github.io/sitsbook/improving-the-quality-of-training-samples.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
 
+Usage: `data("samples_cerrado_mod13q1")`
 
 License: Creative Commons Attribution 4.0 International (CC BY 4.0).
-
-Usage: `data("samples_cerrado_mod13q1")`
 
 
 #### Mato Grosso State (Brazil) Land Use and Land Cover Samples: 9 classes, 6 bands, 1,892 time series
@@ -63,13 +62,17 @@ Example: See chapter ["Image Classification in Data Cubes"](https://e-sensing.gi
 
 Usage: `data("samples_cerrado_cbers")`.
 
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+
 #### Samples for deforestation mapping using SENTINEL-2/2A data
 
-A dataset containing a tibble with 480 times series collected over the state of Rondonia (Brasil) for detecting deforestation from the period 2020-06-04 to 2021-08-26. Each time series contains 8 bands ("B02", "B03", "B04", "B08", "B8A", "B11", "B12") and three indices ("NDVI", "EVI", "NBR") and 4 classes ("Burned_Area", "Forest", "Highly_Degraded" and "Cleared_Area"). 
+A dataset containing a tibble with 480 times series collected over the state of Rondonia (Brasil) for detecting deforestation from the period 2020-06-04 to 2021-08-26. Each time series contains 8 bands ("B02", "B03", "B04", "B08", "B8A", "B11", "B12") and three indices ("NDVI", "EVI", "NBR") and 4 classes ("Burned_Area", "Forest", "Highly_Degraded" and "Cleared_Area").
+
+Example: See chapter ["Uncertainty and active learning"](https://e-sensing.github.io/sitsbook/uncertainty-and-active-learning.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html).
 
 Usage: `data("samples_prodes_4classes")`.
 
-Example: See chapter ["Uncertainty and active learning"](https://e-sensing.github.io/sitsbook/uncertainty-and-active-learning.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 #### Samples for LULC Cerrado biome classification using Landsat-8 OLI data
 
@@ -77,9 +80,12 @@ This dataset was produced by a systematic sampling using a grid of 5km x 5km thr
 
 Reference: Simoes, Rolf, Gilberto Camara, Gilberto Queiroz, Felipe Souza, Pedro R. Andrade, Lorena Santos, Alexandre Carvalho, and Karine Ferreira. 2021. "Satellite Image Time Series Analysis for Big Earth Observation Data" Remote Sensing 13, no. 13: 2428. https://doi.org/10.3390/rs13132428.
 
+Example: See chapter ["Validation and accuracy measurements"](https://e-sensing.github.io/sitsbook/validation-and-accuracy-measurements.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
+
 Usage:`data("samples_cerrado_lc8")`.
 
-Example: See chapter ["Validation and accuracy measurements"](https://e-sensing.github.io/sitsbook/validation-and-accuracy-measurements.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+
 
 #### Samples for LUCC Cerrado classification validation
 
@@ -87,9 +93,11 @@ This dataset provides samples used for validation of the Cerrado LULC classifica
 
 Reference: Simoes, Rolf, Gilberto Camara, Gilberto Queiroz, Felipe Souza, Pedro R. Andrade, Lorena Santos, Alexandre Carvalho, and Karine Ferreira. 2021. "Satellite Image Time Series Analysis for Big Earth Observation Data" Remote Sensing 13, no. 13: 2428. https://doi.org/10.3390/rs13132428.
 
-Usage: `data("samples_validation_cerrado")`
-
 Example: See chapter ["Validation and accuracy measurements"](https://e-sensing.github.io/sitsbook/validation-and-accuracy-measurements.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
+
+Usage: `data("samples_validation_cerrado")`.
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 
 ## CSV files with spatio-temporal samples of land use and land cover
@@ -104,41 +112,43 @@ R package `sitsdata` contains CSV files to be used for extraction of time series
 
 ### Mali Crop Type Data for 2019
 
-This dataset produced by the NASA Harvest team includes crop types labels from ground referencing matched with time-series of Sentinel-2 imagery during the growing season. Ground reference data are collected using an ODK app. Crop types include Maize, Millet, Rice and Sorghum. Labels are vectorized over the Sentinel-2 grid, and provided as raster files. Funding for this dataset is provided by Lutheran World Relief, Bill & Melinda Gates Foundation, and University of Maryland NASA Harvest program.
+This dataset produced by the NASA Harvest team includes crop types labels from ground referencing matched with time-series of Sentinel-2 imagery during the growing season.  Crop types include Maize, Millet, Rice and Sorghum. Funding for this dataset is provided by Lutheran World Relief, Bill & Melinda Gates Foundation, and University of Maryland NASA Harvest program.
 
 Data provided by the Radiant Earth MLHub (https://mlhub.earth/data/umd_mali_crop_type).
-
-License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 Reference: Nakalembe, C.L., Ouedraogo, H., Diarra, N., & Kuzimbu, B. (2021). 2019 Mali Crop Type Training Data for Machine Learning (Version 1.0) Radiant MLHub. Access date: 11 August 2022. https://doi.org/10.34911/rdnt.tgz68o
 
-Usage: `read.csv(system.file("extdata/csv/mali_crops.csv", package = "sitsdata"))`
+Usage: `read.csv(system.file("extdata/csv/mali_crops.csv", package = "sitsdata"))`.
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 ### Rwanda Crop Type Classification Dataset
 
-RTI International (RTI) generated 2,611 labeled point locations representing 19 different land cover types, clustered in 5 distinct agroecological zones within Rwanda. These land cover types were reduced to three crop types (Banana, Maize, and Legume), two additional non-crop land cover types (Forest and Structure), and a catch-all Other land cover type to provide training/evaluation data for a crop classification model. Each point is attributed with its latitude and longitude, the land cover type, and the degree of confidence the labeler had when classifying the point location. For each location there are also three corresponding image chips (4.5 m x 4.5 m in size) with the point id as part of the image name. Each image contains a P1, P2, or P3 designation in the name, indicating the time period. P1 corresponds to December 2018, P2 corresponds to January 2019, and P3 corresponds to February 2019. These data were used in the development of research documented in greater detail in “Deep Neural Networks and Transfer Learning for Food Crop Identification in UAV Images” (Chew et al., 2020).
+RTI International (RTI) generated 2,611 labeled point locations representing 19 different land cover types, clustered in 5 distinct agroecological zones within Rwanda. These land cover types were reduced to three crop types (Banana, Maize, and Legume), two additional non-crop land cover types (Forest and Structure), and a catch-all Other land cover type to provide training/evaluation data for a crop classification model.
 
 Data provided by the Radiant Earth MLHub (https://mlhub.earth/data/umd_mali_crop_type).
 
-License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+References:
 
-Citation: Rineer J., Beach R., Lapidus D., O’Neil M., Temple D., Ujeneza N., Cajka J., & Chew R. (2021), “Drone Imagery Classification Training Dataset for Crop Types in Rwanda”, Version 1.0, Radiant MLHub https://doi.org/10.34911/rdnt.r4p1fr.
+- Rineer J., Beach R., Lapidus D., O’Neil M., Temple D., Ujeneza N., Cajka J., & Chew R. (2021), “Drone Imagery Classification Training Dataset for Crop Types in Rwanda”, Version 1.0, Radiant MLHub https://doi.org/10.34911/rdnt.r4p1fr.
 
-Reference: Chew, R., Rineer, J., Beach, R., O’Neil, M., Ujeneza, N., Lapidus, D., Miano, T., Hegarty-Craver, M., Polly, J., & Temple, D. S. (2020). Deep neural networks and transfer learning for food crop identification in UAV images. Drones, 4(1), 7. https://doi.org/10.3390/drones4010007
+- Chew, R., Rineer, J., Beach, R., O’Neil, M., Ujeneza, N., Lapidus, D., Miano, T., Hegarty-Craver, M., Polly, J., & Temple, D. S. (2020). Deep neural networks and transfer learning for food crop identification in UAV images. Drones, 4(1), 7. https://doi.org/10.3390/drones4010007
 
 Usage: `read.csv(system.file("extdata/csv/rwanda_crops.csv", package = "sitsdata"))`
 
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+
 ### Uganda Crop Type Classification Dataset
 
-This dataset contains crop types and field boundaries along with other metadata collected in a campaign run by Dalberg Data Insights in the end of September 2017, as close as possible to the harvest period of 2017. GeoODKapps were used to collect approximately four points per field to get widest coverage during two field campaigns.
-
-Post ground data collection, Radiant Earth Foundation conducted a quality control of the polygons using Sentinel-2 imagery of the growing season as well as Google basemap imagery, and removed several polygons that overlapped with infrastructure or built-up areas. Finally, ground reference polygons were matched with corresponding time series data from Sentinel-2 satellites (listed in the source imagery property of each label item).
+This dataset contains crop types and field boundaries along with other metadata collected in a campaign run by Dalberg Data Insights in the end of September 2017, as close as possible to the harvest period of 2017. Post ground data collection, Radiant Earth Foundation conducted a quality control of the polygons using Sentinel-2 imagery of the growing season as well as Google basemap imagery, and removed several polygons that overlapped with infrastructure or built-up areas. 
 
 Data provided by the Radiant Earth MLHub (https://mlhub.earth/data/ref_african_crops_uganda_01).
 
-License: Creative Commons Attribution 4.0 International (CC BY 4.0).
-
 Reference: Bocquet, C., & Dalberg Data Insights. (2019) "Dalberg Data Insights Uganda Crop Classification", Version 1.0, Radiant MLHub. Access date: 12 August 2022. https://doi.org/10.34911/RDNT.EII04X.
+
+Usage: `read.csv(system.file("extdata/csv/uganda_crops.csv", package = "sitsdata"))`
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 ## Image Data cubes used for classification examples
 
@@ -150,6 +160,8 @@ Example: See chapter ["Introduction to SITS"](https://e-sensing.github.io/sitsbo
 
 Usage: `system.file("extdata/sinop", package = "sitsdata")`
 
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+
 #### Brazilian Cerrado EVI and NDVI images for year 2018
 
 TIF files containing 23 EVI and NDVI CBERS-4 AWFI images for the period 2018-08-29 to 2019-08-13, covering the agricultural year in the Brazilian Cerrado near the city of Barreiras (Bahia). These files with associated timeline are used to test and validate the algorithms in the R package "sits". 
@@ -157,8 +169,10 @@ TIF files containing 23 EVI and NDVI CBERS-4 AWFI images for the period 2018-08-
 Reference: Karine Ferreira, Gilberto Queiroz, et al., “Earth Observation Data Cubes for Brazil: Requirements, Methodology and Products”. Remote Sensing, 12, 4033, 2020. https://doi.org/10.3390/rs12244033.
 
 Example: See chapter ["Image Classification in Data Cubes"](https://e-sensing.github.io/sitsbook/image-classification-in-data-cubes.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html).
-`
+
 Usage: `system.file("extdata/CBERS", package = "sitsdata")`
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 #### Brazilian Cerrado LULC classification 
 
@@ -166,9 +180,12 @@ A data cube containing classified images of a Landsat-8 data cube for the Brazil
 
 Reference: Simoes, Rolf, Gilberto Camara, Gilberto Queiroz, Felipe Souza, Pedro R. Andrade, Lorena Santos, Alexandre Carvalho, and Karine Ferreira. 2021. "Satellite Image Time Series Analysis for Big Earth Observation Data" Remote Sensing 13, no. 13: 2428. https://doi.org/10.3390/rs13132428.
 
+Example: See chapter ["Validation and accuracy measurements"](https://e-sensing.github.io/sitsbook/validation-and-accuracy-measurements.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
+
 Usage: `readRDS(system.file("extdata/cerrado_classif_dropbox.rds", package = "sitsdata"))`
 
-Example: See chapter ["Validation and accuracy measurements"](https://e-sensing.github.io/sitsbook/validation-and-accuracy-measurements.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+
 
 
 
