@@ -9,9 +9,9 @@ To load these data sets:
 
 `devtools::install_github("e-sensing/sitsdata")`
 
-## Time series for classification using machine learning
+## Time series samples for classification using machine learning
 
-#### Data availability 
+### Data availability 
 
 R package `sitsdata` contains  time series to be used for classification with machine learning methods which are available when the package is loaded using `library(sitsdata)`. All satellite image time series have the following columns: 
 
@@ -23,7 +23,7 @@ R package `sitsdata` contains  time series to be used for classification with ma
 - cube (the name of the image data cube associated with the data).
 - time_series (list  with the values of the time series).
 
-#### Cerrado Land Use and Land Cover Samples: 12 classes, 4 bands, 50,160 time series
+### LULC for Cerrado Biome using MODIS
 
 A dataset containing 50,160 time series samples from Brazilian Cerrado biome, with 12 classes ("Dense_Woodland", "Dunes", "Fallow_Cotton", "Millet_Cotton", "Pasture", "Rocky_Savanna", "Savanna", "Savanna_Parkland", "Silviculture",  "Soy_Corn", "Soy_Cotton", "Soy_Fallow"). Each time series covers 12 months (23 data points) from MOD13Q1 product, and has 4 bands (`EVI`, `NDVI`, `MIR`, and `NIR`). 
 
@@ -36,7 +36,7 @@ Usage: `data("samples_cerrado_mod13q1")`
 License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 
-#### Mato Grosso State (Brazil) Land Use and Land Cover Samples: 9 classes, 6 bands, 1,892 time series
+### Land Use and Land Cover for Mato Grosso (Brazil) using MODIS
 
 A dataset containing 1,892 time series samples from Brazilian Mato Grosso State (Amazon and Cerrado biomes). It has 9 classes ("Cerrado", "Fallow_Cotton", "Forest", "Millet_Cotton", "Pasture", "Soy_Corn", "Soy_Cotton", "Soy_Fallow", "Soy_Millet"). Each time series comprehends 12 months (23 data points) from the MOD13Q1 product, and has 6 bands.
 
@@ -52,7 +52,7 @@ Usage: `data("samples_matogrosso_mod13q1")`
 
 License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-#### Samples for an area of the Brazilian Cerrado using CBERS-4 AWFI image
+### Land Use and Land Cover for part of Brazilian Cerrado using CBERS-4 AWFI
 
 A dataset with 922 time series sampled on the Brazilian Cerrado, obtained from a set of CBERS-4 AWFI images over a subset of tile "022024" of cube "CB4_64_16D_STK" of the Brazilian Data Cube. CBERS-4 AWFI is a sensor with 64 meter resolution. Each time series has one year of 16-day composites from AWFI images, comprising 23 data points and 6 bands ("BAND13", "BAND14", "BAND15", "BAND16", "NDVI", "EVI"). 
 
@@ -64,7 +64,7 @@ Usage: `data("samples_cerrado_cbers")`.
 
 License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-#### Samples for deforestation mapping using SENTINEL-2/2A data
+### Deforestation in Rondonia (Brazil) using SENTINEL-2/2A data
 
 A dataset containing a tibble with 480 times series collected over the state of Rondonia (Brasil) for detecting deforestation from the period 2020-06-04 to 2021-08-26. Each time series contains 8 bands ("B02", "B03", "B04", "B08", "B8A", "B11", "B12") and three indices ("NDVI", "EVI", "NBR") and 4 classes ("Burned_Area", "Forest", "Highly_Degraded" and "Cleared_Area").
 
@@ -74,7 +74,7 @@ Usage: `data("samples_prodes_4classes")`.
 
 License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-#### Samples for LULC Cerrado biome classification using Landsat-8 OLI data
+### Land Use and Land Cover for Brazilian Cerrado using Landsat-8 OLI
 
 This dataset was produced by a systematic sampling using a grid of 5km x 5km throughout the Cerrado biome, collecting 85,026 samples. The training data labels were extracted from three sources: the pastureland map of 2018 from Pastagem.org, MapBiomas Collection 5 for  2018, and Brazil's National Mapping Agency IBGE maps for 2016-2018. Out of the 85,026 samples, the authors selected those where there was no disagreement between the labels assigned by the three sources. The resulting set had 48,850 points from which the authors extracted time series using a Landsat-8 data cube for year 2018. The distribution of samples for each class is the following: `Annual Crop` (6887), `Cerradao` (4211), `Cerrado` (21,909), `Natural Non Vegetated` (38), `Pasture` (12,894), `Perennial Crop` (68), `Silviculture` (805), `Sugarcane` (1775), and `Water` (263). 
 
@@ -86,8 +86,7 @@ Usage:`data("samples_cerrado_lc8")`.
 
 License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-
-#### Samples for LUCC Cerrado classification validation
+### LULC Cerrado classification validation
 
 This dataset provides samples used for validation of the Cerrado LULC classification (see above). The authors did a systematic sampling of the Cerrado biome using a 20 x 20 km grid with a total of 5402 points. These samples are independent of the training set used in the classification. They were interpreted by five specialists using high resolution images from the same period of the classification. This resulted in 5286 evaluation samples thus distributed: "Annual Crop" (553), "Cerrado" (3155), "Natural Non Vegetated" (44), "Pasture" (1246), "Perennial Crop" (38), "Silviculture" (94), "Sugarcane" (77), and "Water" (79).  
 
@@ -100,7 +99,7 @@ Usage: `data("samples_validation_cerrado")`.
 License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 
-## CSV files with spatio-temporal samples of land use and land cover
+## CSV files with samples of land use and land cover
 
 R package `sitsdata` contains CSV files to be used for extraction of time series from data cubes. All CSV files have the following columns: 
 
@@ -152,7 +151,7 @@ License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 ## Image Data cubes used for classification examples
 
-#### Sinop EVI and NDVI images for year 2014
+### EVI and NDVI MOD13Q1 images for Sinop (Brazil)
 
 TIF files containing 23 EVI and NDVI MOD13Q1 images for the period 2013-09-14 to 2014-08-29, covering the agricultural year in the city of Sinop (Mato Grosso). These files with associated timeline are used to test and validate the algorithms in the R package "sits". 
 
@@ -162,7 +161,7 @@ Usage: `system.file("extdata/sinop", package = "sitsdata")`
 
 License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-#### Brazilian Cerrado EVI and NDVI images for year 2018
+### EVI and NDVI CBERS-4 AWFI images for Brazilian Cerrado
 
 TIF files containing 23 EVI and NDVI CBERS-4 AWFI images for the period 2018-08-29 to 2019-08-13, covering the agricultural year in the Brazilian Cerrado near the city of Barreiras (Bahia). These files with associated timeline are used to test and validate the algorithms in the R package "sits". 
 
@@ -174,7 +173,7 @@ Usage: `system.file("extdata/CBERS", package = "sitsdata")`
 
 License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-#### Brazilian Cerrado LULC classification 
+### LULC classification using Landsat-8 for the Brazilian Cerrado
 
 A data cube containing classified images of a Landsat-8 data cube for the Brazilian Cerrado biome, as described in the paper by Simoes et al. (2021). The actual files are provided by a dropbox link.  
 
