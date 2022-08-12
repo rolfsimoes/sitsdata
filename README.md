@@ -1,94 +1,174 @@
-# in-situ data sets
-This project contains in situ data sets used in the e-sensing project. These data sets consists of time series of selected locations which are used to train the statistical learning models used in the e-sensing studies. 
+Data sets for the e-sensing project.
+================
+
+<img src="inst/extdata/sticker/sits_sticker.png" alt="SITS icon" align="right" height="150" width="150"/>
+
+This project contains in situ data sets used in the e-sensing project. These data sets consists of time series of selected locations which are used to train machine learning models, csv files containing training locations, and data cubes to run examples of sits usage.
 
 To load these data sets:
 
 `devtools::install_github("e-sensing/sitsdata")`
 
-## Description of the "data" directory
+## Time series for classification using machine learning
 
-#### Data format 
+#### Data availability 
 
-All data sets in the "data" directory are tibbles with satellite image time series, with the following columns: 
+R package `sitsdata` contains  time series to be used for classification with machine learning methods which are available when the package is loaded using `library(sitsdata)`. All satellite image time series have the following columns: 
 
-- longitude (East-west coordinate of the time series sample in WGS 84),
-- latitude (North-south coordinate of the time series sample in WGS 84),
-- start_date (initial date of the time series),
-- end_date (final date of the time series),
-- label (the class label associated to the sample),
-- cube (the name of the image data cube associated with the data), and
-- time_series ( list containing a tibble with the values of the time series).
-
+- longitude (East-west coordinate of the time series sample in WGS 84).
+- latitude (North-south coordinate of the time series sample in WGS 84).
+- start_date (initial date of the time series).
+- end_date (final date of the time series).
+- label (the class label associated to the sample).
+- cube (the name of the image data cube associated with the data).
+- time_series (list  with the values of the time series).
 
 #### Cerrado Land Use and Land Cover Samples: 12 classes, 4 bands, 50,160 time series
 
-A dataset containing a sits tibble with 50 K time series samples from Brazilian Cerrado biome, with 12 classes ("Dense_Woodsitland", "Dunes", "Fallow_Cotton", "Millet_Cotton", "Pasture", "Rocky_Savanna", "Savanna", "Savanna_Parkland", "Silviculture",  "Soy_Corn", "Soy_Cotton", "Soy_Fallow"). Each time series covers 12 months (23 data points) from MOD13Q1 product, and has 4 bands ("evi", "ndvi", "mir", and "nir").  This data set is used in the paper:
+A dataset containing 50,160 time series samples from Brazilian Cerrado biome, with 12 classes ("Dense_Woodland", "Dunes", "Fallow_Cotton", "Millet_Cotton", "Pasture", "Rocky_Savanna", "Savanna", "Savanna_Parkland", "Silviculture",  "Soy_Corn", "Soy_Cotton", "Soy_Fallow"). Each time series covers 12 months (23 data points) from MOD13Q1 product, and has 4 bands (`EVI`, `NDVI`, `MIR`, and `NIR`). 
 
-Lorena A. Santos, Karine R. Ferreira, Gilberto Camara, Michelle C.A. Picoli, Rolf E. Simoes, “Quality control and class noise reduction of satellite image time series”. ISPRS Journal of Photogrammetry and Remote Sensing, vol. 177, pp 75-88, 2021. https://doi.org/10.1016/j.isprsjprs.2021.04.014.
+Reference: Lorena Santos, Karine Ferreira, Gilberto Camara, Michelle Picoli, Rolf Simoes, “Quality control and class noise reduction of satellite image time series”. ISPRS Journal of Photogrammetry and Remote Sensing, vol. 177, pp 75-88, 2021. https://doi.org/10.1016/j.isprsjprs.2021.04.014.
+
+Example: See chapter ["Improving the Quality of Training Samples"](https://e-sensing.github.io/sitsbook/improving-the-quality-of-training-samples.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
+
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 Usage: `data("samples_cerrado_mod13q1")`
 
-#### Mato Grosso State (Brazil) Land Use and Land Cover Samples: 9 classes, 6 bands, 1,800 time series
 
-A dataset containing a sits tibble with 1,892 time series samples from Brazilian Mato Grosso State (Amazon and Cerrado biomes). The samples are from many sources. It has 9 classes ("Cerrado", "Fallow_Cotton", "Forest", "Millet_Cotton", "Pasture", "Soy_Corn", "Soy_Cotton", "Soy_Fallow", "Soy_Millet"). Each time series comprehends 12 months (23 data points) from MOD13Q1 product, and has 6 bands.
+#### Mato Grosso State (Brazil) Land Use and Land Cover Samples: 9 classes, 6 bands, 1,892 time series
 
-Reference: Câmara, Gilberto; Picoli, Michelle; Maciel, Adeline; Simoes, Rolf; Santos, Lorena; Andrade, Pedro R; Ferreira, Karine; Begotti, Rodrigo; Sanches, Ieda; Carvalho, Alexandre X Y; Coutinho, Alexandre; Esquerdo, Julio; Antunes, Joao; Arvor, Damien (2019): Land cover change maps for Mato Grosso State in Brazil: 2001-2017 (version 3). PANGAEA, https://doi.org/10.1594/PANGAEA.899706
+A dataset containing 1,892 time series samples from Brazilian Mato Grosso State (Amazon and Cerrado biomes). It has 9 classes ("Cerrado", "Fallow_Cotton", "Forest", "Millet_Cotton", "Pasture", "Soy_Corn", "Soy_Cotton", "Soy_Fallow", "Soy_Millet"). Each time series comprehends 12 months (23 data points) from the MOD13Q1 product, and has 6 bands.
+
+References: 
+
+- Michelle Picoli, Gilberto Camara, et al., “Big Earth Observation Time Series Analysis for Monitoring Brazilian Agriculture”. ISPRS Journal of Photogrammetry and Remote Sensing, 145: 328-339, 2018. DOI: 10.1016/j.isprsjprs.2018.08.007.
+
+- Câmara, Gilberto; Picoli, Michelle, et al., Land cover change maps for Mato Grosso State in Brazil: 2001-2017 (version 3). PANGAEA, 2021. https://doi.org/10.1594/PANGAEA.899706. 
+
+Example: See chapter ["Machine Learning for Data Cubes"](https://e-sensing.github.io/sitsbook/machine-learning-for-data-cubes.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
 
 Usage: `data("samples_matogrosso_mod13q1")`
 
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+
 #### Samples for an area of the Brazilian Cerrado using CBERS-4 AWFI image
 
-A dataset containing a tibble with 922 time series sampled on the Brazilian Cerrado. The time series come from a set of CBERS-4 AWFI images over a subset of tile "022024" of cube "CB4_64_16D_STK" of the Brazilian Data Cube. CBERS-4 AWFI is a sensor with 64 meter resolution. Each time series has one year of 16-day composites from AWFI images, comprising 23 data points and 6 bands ("BAND13", "BAND14", "BAND15", "BAND16", "NDVI", "EVI"). 
+A dataset with 922 time series sampled on the Brazilian Cerrado, obtained from a set of CBERS-4 AWFI images over a subset of tile "022024" of cube "CB4_64_16D_STK" of the Brazilian Data Cube. CBERS-4 AWFI is a sensor with 64 meter resolution. Each time series has one year of 16-day composites from AWFI images, comprising 23 data points and 6 bands ("BAND13", "BAND14", "BAND15", "BAND16", "NDVI", "EVI"). 
 
-Usage: `data("samples_cerrado_cbers")`
+Reference: Karine Ferreira, Gilberto Queiroz, et al., “Earth Observation Data Cubes for Brazil: Requirements, Methodology and Products”. Remote Sensing, 12, 4033, 2020. https://doi.org/10.3390/rs12244033.
 
-#### Samples for an area in Amazonia using SENTINEL-2/2A MSI data
+Example: See chapter ["Image Classification in Data Cubes"](https://e-sensing.github.io/sitsbook/image-classification-in-data-cubes.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html).
 
-A dataset containing a tibble with 1,202 time series sampled on the 
-Brazilian Amazonia (Rondonia state). The time series come from a set of SENTINEL-2/2A MSI images over tile "T20LKP" of the standard S2 grid. Each time series comprehends one year of composites of S2 and S2A images, comprising 36 data points and 2 indices ("NDVI", "EVI"). This data set should be used in conjunction with the Sentinel-2 images available in the "extdata" directory (see below)
+Usage: `data("samples_cerrado_cbers")`.
 
-Usage:`data("samples_rondonia_s2")`
+#### Samples for deforestation mapping using SENTINEL-2/2A data
 
-#### Samples for Cerrado biome using Landsat-8 OLI data
+A dataset containing a tibble with 480 times series collected over the state of Rondonia (Brasil) for detecting deforestation from the period 2020-06-04 to 2021-08-26. Each time series contains 8 bands ("B02", "B03", "B04", "B08", "B8A", "B11", "B12") and three indices ("NDVI", "EVI", "NBR") and 4 classes ("Burned_Area", "Forest", "Highly_Degraded" and "Cleared_Area"). 
 
-The Cerrado is Brazil's main agricultural frontier. Its large latitude gradient includes different climate regimes, which lead to important differences in the spectral responses of land cover types. This dataset was produced by a systematic sampling using a grid of 5km x 5km throughout the Cerrado biome, collecting 85,026 samples. The training data labels were extracted from three sources: the pastureland map of 2018 from Pastagem.org, MapBiomas Collection 5 for  2018, and Brazil's National Mapping Agency IBGE maps for 2016-2018. Out of the 85,026 samples, we selected those where there was no disagreement between the labels assigned by the three sources. The resulting set had 48,850 points from which we extracted the time series using the Landsat-8 data cube. The distribution of samples for each class is the following: `Annual Crop` (6887), `Cerradao` (4211), `Cerrado` (21,909), `Natural Non Vegetated` (38), `Pasture` (12,894), `Perennial Crop` (68), `Silviculture` (805), `Sugarcane` (1775), and `Water` (263).
+Usage: `data("samples_prodes_4classes")`.
 
-Reference: Simoes, Rolf, Gilberto Camara, Gilberto Queiroz, Felipe Souza, Pedro R. Andrade, Lorena Santos, Alexandre Carvalho, and Karine Ferreira. 2021. "Satellite Image Time Series Analysis for Big Earth Observation Data" Remote Sensing 13, no. 13: 2428. https://doi.org/10.3390/rs13132428
+Example: See chapter ["Uncertainty and active learning"](https://e-sensing.github.io/sitsbook/uncertainty-and-active-learning.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
 
-Usage:`data("samples_cerrado_lc8")`
+#### Samples for LULC Cerrado biome classification using Landsat-8 OLI data
 
-## Description of the "extdata/sinop" directory
+This dataset was produced by a systematic sampling using a grid of 5km x 5km throughout the Cerrado biome, collecting 85,026 samples. The training data labels were extracted from three sources: the pastureland map of 2018 from Pastagem.org, MapBiomas Collection 5 for  2018, and Brazil's National Mapping Agency IBGE maps for 2016-2018. Out of the 85,026 samples, the authors selected those where there was no disagreement between the labels assigned by the three sources. The resulting set had 48,850 points from which the authors extracted time series using a Landsat-8 data cube for year 2018. The distribution of samples for each class is the following: `Annual Crop` (6887), `Cerradao` (4211), `Cerrado` (21,909), `Natural Non Vegetated` (38), `Pasture` (12,894), `Perennial Crop` (68), `Silviculture` (805), `Sugarcane` (1775), and `Water` (263). 
+
+Reference: Simoes, Rolf, Gilberto Camara, Gilberto Queiroz, Felipe Souza, Pedro R. Andrade, Lorena Santos, Alexandre Carvalho, and Karine Ferreira. 2021. "Satellite Image Time Series Analysis for Big Earth Observation Data" Remote Sensing 13, no. 13: 2428. https://doi.org/10.3390/rs13132428.
+
+Usage:`data("samples_cerrado_lc8")`.
+
+Example: See chapter ["Validation and accuracy measurements"](https://e-sensing.github.io/sitsbook/validation-and-accuracy-measurements.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
+
+#### Samples for LUCC Cerrado classification validation
+
+This dataset provides samples used for validation of the Cerrado LULC classification (see above). The authors did a systematic sampling of the Cerrado biome using a 20 x 20 km grid with a total of 5402 points. These samples are independent of the training set used in the classification. They were interpreted by five specialists using high resolution images from the same period of the classification. This resulted in 5286 evaluation samples thus distributed: "Annual Crop" (553), "Cerrado" (3155), "Natural Non Vegetated" (44), "Pasture" (1246), "Perennial Crop" (38), "Silviculture" (94), "Sugarcane" (77), and "Water" (79).  
+
+Reference: Simoes, Rolf, Gilberto Camara, Gilberto Queiroz, Felipe Souza, Pedro R. Andrade, Lorena Santos, Alexandre Carvalho, and Karine Ferreira. 2021. "Satellite Image Time Series Analysis for Big Earth Observation Data" Remote Sensing 13, no. 13: 2428. https://doi.org/10.3390/rs13132428.
+
+Usage: `data("samples_validation_cerrado")`
+
+Example: See chapter ["Validation and accuracy measurements"](https://e-sensing.github.io/sitsbook/validation-and-accuracy-measurements.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
+
+
+## CSV files with spatio-temporal samples of land use and land cover
+
+R package `sitsdata` contains CSV files to be used for extraction of time series from data cubes. All CSV files have the following columns: 
+
+- longitude (East-west coordinate of the time series sample in WGS 84).
+- latitude (North-south coordinate of the time series sample in WGS 84).
+- start_date (initial date of the time series).
+- end_date (final date of the time series).
+- label (the class label associated to the sample).
+
+### Mali Crop Type Data for 2019
+
+This dataset produced by the NASA Harvest team includes crop types labels from ground referencing matched with time-series of Sentinel-2 imagery during the growing season. Ground reference data are collected using an ODK app. Crop types include Maize, Millet, Rice and Sorghum. Labels are vectorized over the Sentinel-2 grid, and provided as raster files. Funding for this dataset is provided by Lutheran World Relief, Bill & Melinda Gates Foundation, and University of Maryland NASA Harvest program.
+
+Data provided by the Radiant Earth MLHub (https://mlhub.earth/data/umd_mali_crop_type).
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+Reference: Nakalembe, C.L., Ouedraogo, H., Diarra, N., & Kuzimbu, B. (2021). 2019 Mali Crop Type Training Data for Machine Learning (Version 1.0) Radiant MLHub. Access date: 11 August 2022. https://doi.org/10.34911/rdnt.tgz68o
+
+Usage: `read.csv(system.file("extdata/csv/mali_crops.csv", package = "sitsdata"))`
+
+### Rwanda Crop Type Classification Dataset
+
+RTI International (RTI) generated 2,611 labeled point locations representing 19 different land cover types, clustered in 5 distinct agroecological zones within Rwanda. These land cover types were reduced to three crop types (Banana, Maize, and Legume), two additional non-crop land cover types (Forest and Structure), and a catch-all Other land cover type to provide training/evaluation data for a crop classification model. Each point is attributed with its latitude and longitude, the land cover type, and the degree of confidence the labeler had when classifying the point location. For each location there are also three corresponding image chips (4.5 m x 4.5 m in size) with the point id as part of the image name. Each image contains a P1, P2, or P3 designation in the name, indicating the time period. P1 corresponds to December 2018, P2 corresponds to January 2019, and P3 corresponds to February 2019. These data were used in the development of research documented in greater detail in “Deep Neural Networks and Transfer Learning for Food Crop Identification in UAV Images” (Chew et al., 2020).
+
+Data provided by the Radiant Earth MLHub (https://mlhub.earth/data/umd_mali_crop_type).
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+Citation: Rineer J., Beach R., Lapidus D., O’Neil M., Temple D., Ujeneza N., Cajka J., & Chew R. (2021), “Drone Imagery Classification Training Dataset for Crop Types in Rwanda”, Version 1.0, Radiant MLHub https://doi.org/10.34911/rdnt.r4p1fr.
+
+Reference: Chew, R., Rineer, J., Beach, R., O’Neil, M., Ujeneza, N., Lapidus, D., Miano, T., Hegarty-Craver, M., Polly, J., & Temple, D. S. (2020). Deep neural networks and transfer learning for food crop identification in UAV images. Drones, 4(1), 7. https://doi.org/10.3390/drones4010007
+
+Usage: `read.csv(system.file("extdata/csv/rwanda_crops.csv", package = "sitsdata"))`
+
+### Uganda Crop Type Classification Dataset
+
+This dataset contains crop types and field boundaries along with other metadata collected in a campaign run by Dalberg Data Insights in the end of September 2017, as close as possible to the harvest period of 2017. GeoODKapps were used to collect approximately four points per field to get widest coverage during two field campaigns.
+
+Post ground data collection, Radiant Earth Foundation conducted a quality control of the polygons using Sentinel-2 imagery of the growing season as well as Google basemap imagery, and removed several polygons that overlapped with infrastructure or built-up areas. Finally, ground reference polygons were matched with corresponding time series data from Sentinel-2 satellites (listed in the source imagery property of each label item).
+
+Data provided by the Radiant Earth MLHub (https://mlhub.earth/data/ref_african_crops_uganda_01).
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+Reference: Bocquet, C., & Dalberg Data Insights. (2019) "Dalberg Data Insights Uganda Crop Classification", Version 1.0, Radiant MLHub. Access date: 12 August 2022. https://doi.org/10.34911/RDNT.EII04X.
+
+## Image Data cubes used for classification examples
 
 #### Sinop EVI and NDVI images for year 2014
 
 TIF files containing 23 EVI and NDVI MOD13Q1 images for the period 2013-09-14 to 2014-08-29, covering the agricultural year in the city of Sinop (Mato Grosso). These files with associated timeline are used to test and validate the algorithms in the R package "sits". 
 
-Usage: See the "Introduction to SITS" chapter in the book available ar  "https://e-sensing.github.io/sitsbook/"
+Example: See chapter ["Introduction to SITS"](https://e-sensing.github.io/sitsbook/introduction-to-sits.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
 
-## Description of the "extdata/CBERS" directory
+Usage: `system.file("extdata/sinop", package = "sitsdata")`
 
 #### Brazilian Cerrado EVI and NDVI images for year 2018
 
 TIF files containing 23 EVI and NDVI CBERS-4 AWFI images for the period 2018-08-29 to 2019-08-13, covering the agricultural year in the Brazilian Cerrado near the city of Barreiras (Bahia). These files with associated timeline are used to test and validate the algorithms in the R package "sits". 
 
-Usage: See the "Classification of Images in Data Cubes using Satellite Image Time Series" chapter of the book available at "https://e-sensing.github.io/sitsbook/".
+Reference: Karine Ferreira, Gilberto Queiroz, et al., “Earth Observation Data Cubes for Brazil: Requirements, Methodology and Products”. Remote Sensing, 12, 4033, 2020. https://doi.org/10.3390/rs12244033.
 
-## Description of the "extdata/CBERS" directory
+Example: See chapter ["Image Classification in Data Cubes"](https://e-sensing.github.io/sitsbook/image-classification-in-data-cubes.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html).
+`
+Usage: `system.file("extdata/CBERS", package = "sitsdata")`
 
-#### Brazilian Cerrado LUCC classification 
+#### Brazilian Cerrado LULC classification 
 
-TIF files containing labelled images which are part of result of Landsat-8 data cube for the Brazilian Cerrado biome, as described in the paper by Simoes et al. (2021). The files cover tiles "042049", "042050", "043049", "043050" from the Brazil Data Cube. There are QML files associated to the TIF files, for easier visualization on QGIS. 
+A data cube containing classified images of a Landsat-8 data cube for the Brazilian Cerrado biome, as described in the paper by Simoes et al. (2021). The actual files are provided by a dropbox link.  
 
-Reference: Simoes, Rolf, Gilberto Camara, Gilberto Queiroz, Felipe Souza, Pedro R. Andrade, Lorena Santos, Alexandre Carvalho, and Karine Ferreira. 2021. "Satellite Image Time Series Analysis for Big Earth Observation Data" Remote Sensing 13, no. 13: 2428. https://doi.org/10.3390/rs13132428
+Reference: Simoes, Rolf, Gilberto Camara, Gilberto Queiroz, Felipe Souza, Pedro R. Andrade, Lorena Santos, Alexandre Carvalho, and Karine Ferreira. 2021. "Satellite Image Time Series Analysis for Big Earth Observation Data" Remote Sensing 13, no. 13: 2428. https://doi.org/10.3390/rs13132428.
 
-Usage: See the "Validation and accuracy measurements in SITS" chapter of the book "https://e-sensing.github.io/sitsbook/". 
+Usage: `readRDS(system.file("extdata/cerrado_classif_dropbox.rds", package = "sitsdata"))`
 
-## Description of the "extdata/csv" directory
+Example: See chapter ["Validation and accuracy measurements"](https://e-sensing.github.io/sitsbook/validation-and-accuracy-measurements.html) in the `sits` [reference book](https://e-sensing.github.io/sitsbook/index.html)
 
-#### Brazilian Cerrado LUCC classification validation samples
 
-CSV file containing 5,295 labelled points used for the validation of the LUCC classification for the Cerrado biome done by Simoes et al.(2021). 
 
-Reference: Simoes, Rolf, Gilberto Camara, Gilberto Queiroz, Felipe Souza, Pedro R. Andrade, Lorena Santos, Alexandre Carvalho, and Karine Ferreira. 2021. "Satellite Image Time Series Analysis for Big Earth Observation Data" Remote Sensing 13, no. 13: 2428. https://doi.org/10.3390/rs13132428
-
-Usage: See the "Validation and accuracy measurements in SITS" chapter of the book "https://e-sensing.github.io/sitsbook/". 
