@@ -123,6 +123,56 @@ NULL
 #' @usage data("samples_cerrado_lc8")
 NULL
 
+#' @title LULC Cerrado classification validation
+#' 
+#' @docType data
+#' @name samples_validation_cerrado
+#' @keywords datasets
+#' 
+#' @description 
+#' 
+#' This dataset provides samples used for validation of the Cerrado 
+#' LULC classification (see above). The authors did a systematic sampling of 
+#' the Cerrado biome using a 20 x 20 km grid with a total of 5402 points. 
+#' These samples are independent of the training set used in the classification. 
+#' They were interpreted by five specialists using high resolution 
+#' images from the same period of the classification. 
+#' This resulted in 5286 evaluation samples thus distributed: 
+#' "Annual Crop" (553), "Cerrado" (3155), "Natural Non Vegetated" (44), 
+#' "Pasture" (1246), "Perennial Crop" (38), "Silviculture" (94), 
+#' "Sugarcane" (77), and "Water" (79).  
+#' 
+#' Reference: Simoes, Rolf, Gilberto Camara, Gilberto Queiroz, 
+#' Felipe Souza, Pedro R. Andrade, Lorena Santos, Alexandre Carvalho, 
+#' and Karine Ferreira. 2021. 
+#' "Satellite Image Time Series Analysis for Big Earth Observation Data". 
+#' Remote Sensing 13, no. 13: 2428. https://doi.org/10.3390/rs13132428.
+#' 
+#' @usage data("samples_validation_cerrado")
+NULL
+
+#' @title Deforestation in Rondonia (Brazil) using SENTINEL-2/2A data
+#'
+#' 
+#' @docType data
+#' @name samples_prodes_4classes.rda
+#' @keywords datasets
+#'
+#' @description 
+#' A dataset containing a tibble with 480 times series collected 
+#' over the state of Rondonia (Brasil) for detecting deforestation 
+#' from the period 2020-06-04 to 2021-08-26. 
+#' Each time series contains 8 bands ("B02", "B03", "B04", "B08", "B8A", 
+#' "B11", "B12") and three indices ("NDVI", "EVI", "NBR"), labelled as
+#' 4 classes ("Burned_Area", "Forest", "Highly_Degraded" and "Cleared_Area").
+#'
+#' @format 
+#' A \code{sits} tibble with 480 samples.
+#' 
+#'    
+#' @usage data("samples_prodes_4classes")
+#'
+NULL
 #'@title Samples of Amazon tropical forest biome for deforestation analysis
 #'
 #' 
